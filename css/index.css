@@ -25,7 +25,18 @@ nav {
     rgba(56, 42, 42, 1) 100%
   );
   color: #fff;
-  padding: 30px 20px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  width: 10%;
+}
+
+.logo img{
+  width: 100%;
 }
 
 .nav-links {
