@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos</title>
+    <link rel="stylesheet" href="css/tipos.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="content">
+        <nav>
+          <div class="logo">
+            <img src="images/logo.png"/>
+          </div>
+          <ul class="nav-links">
+            <li class="nav-link">
+              <a>Inicio</a>
+            </li>
+            <li class="nav-link">
+              <a>Que es?</a>
+            </li>
+            <li class="nav-link">
+              <a>Tipos</a>
+            </li>
+            <li class="nav-link">
+              <a>Curiosidades</a>
+            </li>
+            <li class="nav-link">
+              <a href="tipos.html">Tipos de base de datos</a>
+            </li>
+          </ul>
+        </nav>
+
+    </div>
+
+    <div class="sections">
+
+  <!-- Sección 1: Carousel Izquierda -->
+  <div class="section">
+    <div class="section-carousel">
+      <div class="carousel">
+        <div class="slides" id="slides1">
+          <div class="slide" style="background-image: url('images/diagramexample.png');"></div>
+          <div class="slide" style="background-image: url('images/logoexample.png');"></div>
+          <div class="slide" style="background-image: url('images/mongoexample.jpg');"></div>
+        </div>
+        <div class="controls">
+          <button onclick="moveSlideCustom(-1, 1)">❮</button>
+          <button onclick="moveSlideCustom(1, 1)">❯</button>
+        </div>
+      </div>
+    </div>
+    <div class="section-content">
+      <h2>Título 1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-content">
+      <h2>Título 2</h2>
+      <p>Nulla facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+    </div>
+    <div class="section-carousel">
+      <div class="carousel">
+        <div class="slides" id="slides2">
+          <div class="slide" style="background-image: url('images/diagramexample.png');"></div>
+          <div class="slide" style="background-image: url('images/logoexample.png');"></div>
+          <div class="slide" style="background-image: url('images/mongoexample.jpg');"></div>
+        </div>
+        <div class="controls">
+          <button onclick="moveSlideCustom(-1, 2)">❮</button>
+          <button onclick="moveSlideCustom(1, 2)">❯</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-carousel">
+      <div class="carousel">
+        <div class="slides" id="slides3">
+          <div class="slide" style="background-image: url('images/diagramexample.png');"></div>
+          <div class="slide" style="background-image: url('images/logoexample.png');"></div>
+          <div class="slide" style="background-image: url('images/mongoexample.jpg');"></div>
+        </div>
+        <div class="controls">
+          <button onclick="moveSlideCustom(-1, 3)">❮</button>
+          <button onclick="moveSlideCustom(1, 3)">❯</button>
+        </div>
+      </div>
+    </div>
+    <div class="section-content">
+      <h2>Título 3</h2>
+      <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nec odio.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-content">
+      <h2>Título 4</h2>
+      <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl.</p>
+    </div>
+    <div class="section-carousel">
+      <div class="carousel">
+        <div class="slides" id="slides4">
+          <div class="slide" style="background-image: url('images/diagramexample.png');"></div>
+          <div class="slide" style="background-image: url('images/logoexample.png');"></div>
+          <div class="slide" style="background-image: url('images/mongoexample.jpg');"></div>
+        </div>
+        <div class="controls">
+          <button onclick="moveSlideCustom(-1, 4)">❮</button>
+          <button onclick="moveSlideCustom(1, 4)">❯</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="section-carousel">
+      <div class="carousel">
+        <div class="slides" id="slides5">
+          <div class="slide" style="background-image: url('images/diagramexample.png');"></div>
+          <div class="slide" style="background-image: url('images/logoexample.png');"></div>
+          <div class="slide" style="background-image: url('images/mongoexample.jpg');"></div>
+        </div>
+        <div class="controls">
+          <button onclick="moveSlideCustom(-1, 5)">❮</button>
+          <button onclick="moveSlideCustom(1, 5)">❯</button>
+        </div>
+      </div>
+    </div>
+    <div class="section-content">
+      <h2>Título 5</h2>
+      <p>Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem malesuada magna mollis euismod.</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // Un array para guardar el índice de cada carousel
+  let currentIndexes = [0, 0, 0, 0, 0];
+
+  function moveSlideCustom(direction, carouselNumber) {
+    const idx = carouselNumber - 1;
+    const slides = document.getElementById('slides' + carouselNumber);
+    const totalSlides = slides.children.length;
+    currentIndexes[idx] = (currentIndexes[idx] + direction + totalSlides) % totalSlides;
+    slides.style.transform = `translateX(-${currentIndexes[idx] * 100}%)`;
+  }
+
+  // Auto-slide para cada carrusel
+  for (let i = 1; i <= 5; i++) {
+    setInterval(() => moveSlideCustom(1, i), 4000); // Cambia cada 4 segundos
+  }
+</script>
+<script src="js/titulo.js"></script>
+
+    <script src="js/titulo.js"></script>
+</body>
+</html>
