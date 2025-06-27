@@ -154,7 +154,7 @@ main article p{
 }
 
 .videos-tutoriales{
-  padding: 20px 40px;
+  padding: 20px 30px;
   width: 90%;
   background: #fff;
   margin: 30px auto;
@@ -169,6 +169,7 @@ main article p{
 .recomendations{
   width: 100%;
   display: flex;
+  margin-top: 30px;
   justify-content: center;
   flex-direction: column;
   gap: 10px;
@@ -177,12 +178,44 @@ main article p{
 .videos-content{
   display: flex;
   margin-bottom: 50px;
-  gap: 10px;
+  justify-content: center;
+  gap: 30px;
   padding: 5px;
 }
 
 .tutoriales-content{
   display: flex;
+  gap: 30px;
+  margin-top: 30px;
+  justify-content: center;
+  padding: 5x;
+}
+
+.video{
+  display: flex;
+  width: 30%;
   flex-direction: column;
   gap: 10px;
+  justify-content: center;
+}
+
+.video video{
+  width: 100%;
+}
+
+.tutorial{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tutorial h4{
+  text-align: center;
+}
+
+.tutorial a{
+  text-decoration: none;
+  color: #000;
 }
