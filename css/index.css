@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background: #f5e8b4;
 }
 
@@ -16,6 +16,7 @@ header {
 nav {
   width: 100%;
   position: fixed;
+  top: 0;
   z-index: 100;
   background: #b57f7f;
   background: linear-gradient(
@@ -48,16 +49,38 @@ nav {
 
 .nav-link {
   text-decoration: none;
-  border: 1px solid #fff;
   padding: 10px 20px;
-  border-radius: 15px;
   cursor: pointer;
+  font-size: 25px;
   transition: all 0.5s ease;
 }
 
 .nav-link:hover {
-  background: #fff;
+  transform: translateY(-5px);
+}
+
+.nav-link a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.contact-link{
+  background: #5c7bf9;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 25px;
+  transition: all 0.5s ease;
+}
+
+.contact-link a{
+  text-decoration: none;
   color: #000;
+}
+
+.contact-link:hover{
+  background: #fff;
 }
 
 .header-content {
