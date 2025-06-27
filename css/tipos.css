@@ -70,15 +70,15 @@ body {
   justify-content: center;
   align-items: center;
   min-width: 320px;
-  max-width: 600px;
+  max-width: 1100px; /* Aumenta el ancho máximo */
   background: transparent;
 }
 
 .carousel {
   position: relative;
   width: 100%;
-  max-width: 600px; /* Antes: 420px */
-  height: 340px;
+  max-width: 1100px; /* Aumenta el ancho máximo */
+  height: 400px;     /* Puedes ajustar el alto si lo deseas */
   overflow: hidden;
   border-radius: 16px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.13);
@@ -96,8 +96,8 @@ body {
 }
 
 .slide {
-  min-width: 100%;
-  height: 340px;
+  min-width: 1100px; /* Igual al max-width del carrusel */
+  height: 400px;     /* Igual al alto del carrusel */
   background-size: cover;
   background-position: center;
   border-radius: 16px;
