@@ -1,9 +1,85 @@
 /* Efecto general y fondo */
-body {
-  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
-  font-family: 'Segoe UI', 'Arial', sans-serif;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5e8b4;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background: #b57f7f;
+  background: linear-gradient(
+    90deg,
+    rgba(181, 127, 127, 1) 1%,
+    rgba(107, 52, 52, 1) 50%,
+    rgba(56, 42, 42, 1) 100%
+  );
+  color: #fff;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  width: 8%;
+}
+
+.logo img{
+  width: 100%;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 25px;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 0px 20px;
+  cursor: pointer;
+  font-size: 25px;
+  transition: all 0.5s ease;
+}
+
+.nav-link:hover {
+  transform: translateY(-5px);
+}
+
+.nav-link a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.contact-link{
+  background: #5c7bf9;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 25px;
+  transition: all 0.5s ease;
+}
+
+.contact-link a{
+  text-decoration: none;
+  color: #000;
+}
+
+.contact-link:hover{
+  background: #fff;
 }
 
 /* Contenedor de secciones */
@@ -40,7 +116,7 @@ body {
 
 /* Contenido de texto */
 .section-content {
-  flex: 1;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,8 +141,9 @@ body {
 
 /* Carrusel */
 .section-carousel {
-  flex: 1;
+  width: 60%;
   display: flex;
+  margin: auto;
   justify-content: center;
   align-items: center;
   min-width: 320px;
@@ -78,7 +155,8 @@ body {
   position: relative;
   width: 100%;
   max-width: 1100px; /* Aumenta el ancho máximo */
-  height: 400px;     /* Puedes ajustar el alto si lo deseas */
+  height: 400px; 
+  margin: auto;    /* Puedes ajustar el alto si lo deseas */
   overflow: hidden;
   border-radius: 16px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.13);
@@ -90,18 +168,14 @@ body {
 
 .slides {
   display: flex;
-  transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+  transition: transform 0.5s ease-in-out;
   width: 100%;
-  height: 100%;
 }
-
 .slide {
-  min-width: 1100px; /* Igual al max-width del carrusel */
-  height: 400px;     /* Igual al alto del carrusel */
+  min-width: 100%;
+  height: 500px;
   background-size: cover;
   background-position: center;
-  border-radius: 16px;
-  box-shadow: 0 1px 8px rgba(0,0,0,0.07);
 }
 
 /* Botones del carrusel */
@@ -176,5 +250,72 @@ body {
 }
 
 .content{
-  margin-top: 200px;
+  margin-top: 140px;
+}
+
+.index-footer{
+  width: 100%;
+  background: rgb(56, 42, 42);
+  padding: 20px 100px;
+  color: #fff;
+}
+
+.index-footer h3{
+  margin-bottom: 40px;
+}
+
+.extras{
+  display: flex;
+  justify-content: center;
+}
+
+.extra {
+  width: 20%;
+   /* alineación arriba */
+}
+
+.enlaces{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.enlaces a{
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.enlaces a:hover{
+  color: #6d51fa;
+}
+
+.iconos {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.iconos a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.iconos a:hover {
+  transform: scale(1.2);
+  color: #f39c12; /* color en hover */
+}
+
+.idiomas{
+  margin: 40px auto 0 auto;
+  text-align: center;
+  width: 80%;
+}
+
+.copyright{
+  text-align: center;
+  color: #fff;
+  background: #000;
+  padding: 20px;
 }
