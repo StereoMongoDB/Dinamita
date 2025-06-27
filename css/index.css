@@ -33,7 +33,7 @@ nav {
 }
 
 .logo{
-  width: 10%;
+  width: 8%;
 }
 
 .logo img{
@@ -44,12 +44,14 @@ nav {
   list-style: none;
   display: flex;
   justify-content: right;
+  align-items: center;
   gap: 25px;
+  padding: 0;
 }
 
 .nav-link {
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 0px 20px;
   cursor: pointer;
   font-size: 25px;
   transition: all 0.5s ease;
@@ -218,4 +220,10 @@ main article p{
 
 .tutorial a{
   color: #000;
+}
+
+.index-footer{
+  width: 100%;
+  background: rgb(56, 42, 42);
+  padding: 20px;
 }
