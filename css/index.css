@@ -153,8 +153,36 @@ main article p{
   font-size: 18px;
 }
 
-.section-1{
+.videos-tutoriales{
+  padding: 20px 40px;
+  width: 90%;
   background: #fff;
-  margin: 100px auto;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+
+.videos-tutoriales h3{
+  text-align: center;
+  font-size: 30px;
+}
+
+.recomendations{
   width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.videos-content{
+  display: flex;
+  margin-bottom: 50px;
+  gap: 10px;
+  padding: 5px;
+}
+
+.tutoriales-content{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
