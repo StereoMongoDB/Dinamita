@@ -158,3 +158,21 @@ main article p{
   margin: 100px auto;
   width: 100%;
 }
+
+main article h1 {
+  margin-bottom: 15px;
+}
+
+main article p {
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 20px; /* Espacio entre párrafos */
+}
+
+main article ul {
+  margin-bottom: 20px; /* Espacio debajo de listas */
+}
+
+main article li {
+  margin-bottom: 10px; /* Espacio entre ítems de la lista */
+}
