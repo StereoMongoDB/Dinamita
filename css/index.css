@@ -276,6 +276,12 @@ main article p{
   color: #f39c12; /* color en hover */
 }
 
+.idiomas{
+  margin: 40px auto 0 auto;
+  text-align: center;
+  width: 80%;
+}
+
 .copyright{
   text-align: center;
   color: #fff;
