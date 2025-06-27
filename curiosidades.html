@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curiosidades</title>
+    <link rel="stylesheet" href="css/curiosidades.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="content">
+        <nav>
+          <div class="logo">
+            <img src="images/logo.png"/>
+          </div>
+          <ul class="nav-links">
+            <li class="nav-link">
+                <a href="index.html">Inicio</a>
+            </li>
+            <li class="nav-link">
+                <a href="quees.html">¿Qué es?</a>
+            </li>
+            <li class="nav-link">
+                <a href="tipos.html">Tipos</a>
+            </li>
+            <li class="nav-link">
+                <a href="curiosidades.html">Curiosidades</a>
+            </li>
+            <li class="nav-link">
+              <a href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+    </div>
+
+    <main>
+        <article>
+          <h1>Datos curiosos sobre SQL</h1>
+          <p>SQL ha sido una de las tecnologías más utilizadas en la informática desde hace décadas. A continuación te presentamos algunas curiosidades interesantes:</p>
+          <ul>
+            <li>SQL fue creado por IBM en los años 70 y originalmente se llamó SEQUEL.</li>
+            <li>El estándar SQL es mantenido por ANSI e ISO, pero muchos motores lo implementan con variaciones.</li>
+            <li>MySQL, uno de los sistemas más populares, fue creado en Suecia y se utiliza en millones de servidores.</li>
+            <li>SQLite está integrado en la mayoría de los smartphones y navegadores modernos.</li>
+            <li>Algunas plataformas como Instagram, LinkedIn y WhatsApp lo usan para manejar datos masivos.</li>
+            <li>El primer sistema comercial que implementó SQL fue Oracle en 1979.</li>
+            <li>SQL no es completamente “case sensitive”, pero los valores que maneja sí pueden serlo dependiendo del motor.</li>
+          </ul>
+        </article>
+
+        <div class="carousel">
+          <div class="slides" id="slides">
+            <div class="slide" style="background-image: url('images/d22b1c-e8db-b8a3-852a-d0dd0bb5305c_Fondo_Blog_355.png');"></div>
+            <div class="slide" style="background-image: url('images/Curso-SQL.png');"></div>
+            <div class="slide" style="background-image: url('images/sql1.png');"></div>
+          </div>
+          <div class="controls">
+            <button onclick="moveSlide(-1)">❮</button>
+            <button onclick="moveSlide(1)">❯</button>
+          </div>
+        </div>
+      </main>
+
+      <footer class="index-footer">
+        <div class="extras">
+          <div class="extra informacion-sql">
+              <h3>Información sobre SQL</h3>
+            <div class="enlaces">
+              <a>¿Qué es SQL?</a>
+            <a>¿Qué es una base de datos en la nube?</a>
+            <a>Accesibilidad en SQL</a>
+            <a>¿Qué es una vista?</a>
+            <a>¿Qué es un indice?</a>
+            <a>Seguridad en base de datos</a>
+            <a>Novedades</a>
+            </div>
+          </div>
+          <div class="extra recursos-sql">
+<h3>Recursos para SQL</h3>
+            <div class="enlaces">
+              <a>Introducción</a>
+            <a>Centro de arquitectura</a>
+            <a>Preguntas frecuentes</a>
+            <a>Motores de SQL</a>
+            <a>Guias</a>
+            </div>
+          </div>
+          <div class="extra lenguajes-sql">
+            <div>
+              <h3>Programación en SQL</h3>
+            </div>
+            
+            <div class="enlaces">
+              <a>Herramientas</a>
+            <a>Python con SQL</a>
+            <a>Power BI y SQL</a>
+            <a>SQL Integration Services</a>
+            <a>JavaScript y MongoDB</a>
+            </div>
+          </div>
+          <div class="extra redes">
+            <div class="iconos">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+  <a href="#"><i class="fab fa-twitter"></i></a>
+  <a href="#"><i class="fab fa-instagram"></i></a>
+  <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>Dinamita es un grupo de estudiantes dedicados a realizar paginas informativas sobre cosas "relevantes", sin embargo, la verdad es que me pudri en prision por 20 años...</p>
+          </div>
+        </div>
+        <div class="idiomas">
+          <p><span>Idioma  </span> عربي | Bahasa | Indonesia | Deutsch | English | Español | Français |Italiano | Português | Tiếng | Việt | Türkçe | Ρусский | ไทย | 日本語 | 한국어</p>
+        </div>
+      </footer>
+      <div class="copyright">
+        <p>Equipo Dinamita | Todos los derechos reservados @2025</p>
+      </div>
+    </div>
+
+    <script>
+      let currentIndex = 0;
+      const slides = document.getElementById('slides');
+      const totalSlides = slides.children.length;
+
+      function moveSlide(direction) {
+        currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+
+      setInterval(() => moveSlide(1), 5000);
+    </script>
+  </body>
+</html>
