@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="css/quees.css"></link>
+  </head>
+  <body>
+    <div class="content">
+      <header>
+        <nav>
+          <div class="logo">
+            <img src="images/logo.png"/>
+          </div>
+          <ul class="nav-links">
+            <li class="nav-link">
+              <a>Inicio</a>
+            </li>
+            <li class="nav-link">
+              <a>Que es?</a>
+            </li>
+            <li class="nav-link">
+              <a href ="tipos.html">Tipos</a>
+            </li>
+            <li class="nav-link">
+              <a>Curiosidades</a>
+            </li>
+            <li class="contact-link">
+              <a href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-content">
+          <h1>¿Qué es SQL?</h1>
+        </div>
+      </header>
+      <main>
+        
+        <article>
+            <h1>¿Qué es SQL?</h1>
+            <p>Structured Query Language (SQL) es un lenguaje de programación diseñado específicamente para gestionar y manipular bases de datos relacionales.</p>
+            <h1>¿Para qué sirve SQL?</h1>
+          <ul>
+            <li>
+            Consultar datos: buscar información específica dentro de una base de datos.
+            </li>
+          <li>
+            Insertar datos: agregar nuevos registros.
+          </li>
+          <li>
+            Actualizar datos: modificar información existente.
+          </li>
+          <li>
+            Eliminar datos: borrar registros específicos.
+          </li>
+          <li>
+            Crear y modificar estructuras: como tablas, índices, vistas, etc.
+          </li>
+          </ul>
+        </article>
+        <div class="carousel">
+          <div class="slides" id="slides">
+            <div class="slide" style="background-image: url('images/diagramexample.png');"></div>
+            <div class="slide" style="background-image: url('images/logoexample.png');"></div>
+            <div class="slide" style="background-image: url('images/mongoexample.jpg');"></div>
+          </div>
+          <div class="controls">
+            <button onclick="moveSlide(-1)">❮</button>
+            <button onclick="moveSlide(1)">❯</button>
+          </div>
+        </div>
+        
+      </main>
+      
+      <main>
+        <div class="carousel">
+          <div class="slides" id="slides">
+            <div class="slide" style="background-image: url('images/diagramexample.png');"></div>
+            <div class="slide" style="background-image: url('images/logoexample.png');"></div>
+            <div class="slide" style="background-image: url('images/mongoexample.jpg');"></div>
+            
+          </div>
+          
+          <div class="controls">
+            <button onclick="moveSlide(-1)">❮</button>
+            <button onclick="moveSlide(1)">❯</button>
+          </div>
+        </div>
+        <article>
+            
+            <h1>¿Dónde se usa SQL?</h1>
+          <ul>
+            <li>
+            En sistemas de bases de datos como MySQL, PostgreSQL, SQL Server, Oracle, y SQLite.
+            </li>
+          <li>
+            En desarrollo de aplicaciones web y móviles que requieren almacenar datos.
+          </li>
+          <li>
+            En análisis de datos y ciencia de datos para extraer información valiosa de grandes conjuntos de datos.
+          </li>
+          </ul>
+        </article>
+        
+      </main>
+      <section class="videos">
+        
+      </section>
+      <footer class="index-footer">
+
+      </footer>
+    </div>
+    <script src="js/titulo.js"></script>
+    <script>
+    let currentIndex = 0;
+    const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
+
+    function moveSlide(direction) {
+      currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    // Optional: auto-slide every 5 seconds
+    setInterval(() => moveSlide(1), 3000);
+  </script>
+  </body>
+</html>
+
