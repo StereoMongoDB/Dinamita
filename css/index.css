@@ -177,7 +177,7 @@ main article p{
 
 .videos-content{
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   justify-content: center;
   gap: 30px;
   padding: 5px;
@@ -186,7 +186,7 @@ main article p{
 .tutoriales-content{
   display: flex;
   gap: 30px;
-  margin-top: 30px;
+  margin-top: 20px;
   justify-content: center;
   padding: 5x;
 }
@@ -196,11 +196,12 @@ main article p{
   width: 30%;
   flex-direction: column;
   gap: 10px;
-  justify-content: center;
 }
 
-.video video{
+.video iframe{
   width: 100%;
+  height: 300px;
+  margin-bottom: 15px;
 }
 
 .tutorial{
@@ -216,6 +217,5 @@ main article p{
 }
 
 .tutorial a{
-  text-decoration: none;
   color: #000;
 }
